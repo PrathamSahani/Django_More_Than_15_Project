@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <title>Job Portal</title>
+</head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .text {
+    color: green;
+    font-weight: bold;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .geek {
+    color: green;
+    margin-left: 40%;
+    margin-top: 3%;
+    font-weight: bold;
+  }
+</style>
+
+<nav class="navbar navbar-dark bg-warning pt-0 shadow-lg">
+  <div class="container-fluid">
+    <a href="" class="navbar-brand">
+      <h2><b style="color: rgb(48, 33, 33); font-size:25px;"> 📅 Leave Management 🎉</b></h2>
+    </a>
+    <div class="d-flex">
+      <a href="" class="btn btn-success"><i id="g" class="fas fa-globe"></i> Visit Website </a>
+
+    </div>
+  </div>
+</nav>
+
+<h1 class="geek">GeeksforGeeks 🤓</h1>
+
+<div class="container mt-5">
+
+  <form class="col-5 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data"
+    style="background-color: #eadddd;">
+    {% csrf_token %}
+
+    <h3 style="font-weight: bold;">Update Leaves 📆</h3>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name 📝</label>
+      <input name="name" value="{{leave.name}}" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Leave Reason 📄</label>
+      <textarea name="leave_description" value="" class="form-control" required>{{leave.leave_description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Leave Date 🗓️</label>
+      <input name="leave_date" type="text" class="form-control" value={{leave.leave_date}}>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> Action 🗓️</label>
+      <input name="leave_accept" type="text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-danger">Update Satus 🚀</button>
+  </form>
+
+</div>
+
+</body>
+
+</html>

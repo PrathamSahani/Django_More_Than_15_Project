@@ -1,0 +1,57 @@
+<!-- {% extends "base.html" %}
+{% block start %} -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="class mt-5">
+    <form action="">
+      <div class="max-auto col-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Search Food</label>
+          <input name="search" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary "> Search</button>
+    </form>
+  </div>
+  </div>
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">blood name</th>
+        <th scope="col">blood Desc</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for blood in bloods %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{blood.blood_name}}</td>
+        <td>{{blood.blood_description}}</td>
+        <td>
+          <img src="/media/{{blood.blood_image}}" style="height: 100px;">
+        </td>
+        <td>
+          <a href="/delete_blood/{{blood.id }}" class="btn btn-danger m-2">Delete</a>
+          <!-- <a href="/update_blood/{{blood.id }}" class="btn btn-success">Update</a> -->
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+
+</html>
+
+<!-- {% endblock %} -->

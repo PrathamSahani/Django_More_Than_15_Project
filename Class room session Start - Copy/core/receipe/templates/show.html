@@ -1,0 +1,84 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .text{
+    color: green;
+    font-weight: bold;
+  }
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    background-color: rgba(248, 241, 241, 0.8);
+    border: 1px solid #ccc;
+}
+th {
+  background-color: rgba(248, 241, 241, 0.8);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(248, 241, 241, 0.8);
+}
+
+tr:hover {
+  background-color: rgba(248, 241, 241, 0.8);
+}
+body {
+  background-image: linear-gradient(rgba(4, 9, 30, 0),rgba(108, 208, 61, 0.4)),url(https://i.ibb.co/SNqkBQH/gfglogo-300x300.png);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.foo{
+  font-size: 20px;
+}
+</style>
+<div class="class mt-5">
+  <form action="" >
+
+    <div class="max-auto col-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="foo" style=" margin-left:-1165px;"><strong>Search Class 🔍</strong></label>
+        <input name="search" type="text" class="form-control" style="width: 800px; margin-left:-600px">
+      </div>
+      <button type="submit" class="btn btn-primary " style=" margin-left:-1190px;"> Search 🔎</button>
+    </form>
+  </div>
+</div>
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Subject name 📚</th>
+      <th scope="col">Class Desc ✍️</th>
+      <th scope="col">Link 🔗</th>
+      <th scope="col">Actions ⚙️</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for subject in subjects %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{subject.subject_name}}</td>
+      <td>{{subject.subject_description}}</td>
+      <td>{{subject.class_link}}</td>
+          <td>
+              <a href="/delete_subject/{{subject.id }}" class="btn btn-danger m-2">Delete ❌</a>
+              <a href="/update_subject/{{subject.id }}" class="btn btn-success">Update ✅</a>
+          </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

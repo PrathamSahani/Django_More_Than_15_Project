@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block start %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .text {
+    color: green;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin-left: 450px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+</style>
+<h3>" Welcome to Blood Management System 🩸" </h3>
+
+<div class="container mt-5">
+    <form class="col-4 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+        <h4>Need Blood 🩸</h4>
+        <hr>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Person Name 👤</label>
+            <input name="blood_name" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Reason 📋</label>
+            <textarea name="blood_description" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Blood Group 🅾️</label>
+            <input name="blood_date" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Blood Quantity (ml) 💉</label>
+            <input name="blood_age" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contact No. ☎️</label>
+            <input name="blood_fill" type="text" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-success">Add ➕</button>
+    </form>
+
+    <hr>
+    <!-- Add the rest of your code here -->
+
+</div>
+{% endblock %}

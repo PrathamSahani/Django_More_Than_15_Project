@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block start %}
+<div class="container mt-5 pt-3">
+    <div class="row">
+    {% for book in books %}
+    <div class="col-md-3 pt-3">
+        <div class="card shadow-lg" style="width: 18rem;">
+            <img src="{{book.images}}" style="height: 210px;" alt="Veg Pizza Image">
+            <div class="card-body">
+                <h5 class="card-title">  <strong style="font-size: 23px; color:rgb(61, 59, 59)">{{book.book_name}}</strong></h5>
+                <p>Book Pages - {{book.price}} <br> <strong>Category</strong> - {{book.category.category_name}}</p>
+                 <a href="{%  url 'add-cart' book.uid %}" class="btn btn-success" > Read <i class="fas fa-book"></i></a>
+                   </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

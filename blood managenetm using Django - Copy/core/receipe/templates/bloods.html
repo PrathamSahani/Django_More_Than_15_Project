@@ -1,0 +1,76 @@
+<!-- {% extends "base.html" %}
+{% block start %} -->
+
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+  .text{
+    color: green;
+    font-weight: bold;
+  }
+</style>
+<div class="container mt-5">  
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- <h2 class="text  text-center"> GeeksforGeeks </h2> -->
+        <br>
+        <h3>Add Blood</h3>
+        <hr>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Blood name</label>
+          <input name="blood_name" type="text" class="form-control"  required>
+         </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"  >Blood description</label>
+          <textarea name="blood_description" class="form-control" required ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Blood Image</label>
+            <input name="blood_image" type="file" class="form-control" >
+          </div>
+      
+        <button type="submit" class="btn btn-success">Add Receipe</button>
+      </form>
+
+      <hr>
+      <!-- <div class="class mt-5">
+        <form action="">
+
+          <div class="max-auto col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Search Blood</label>
+              <input name="search" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary "> Search</button>
+          </form>
+        </div>
+      </div>
+      <table class="table mt-5">
+        <thead>
+
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Blood name</th>
+            <th scope="col">Blood Desc</th>
+            <th scope="col">Image</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for blood in bloods %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{blood.blood_name}}</td>
+            <td>{{blood.blood_description}}</td>
+            <td>
+                <img src="/media/{{blood.blood_image}}" style="height: 100px;"> </td>
+                <td>
+                    <a href="/delete_blood/{{blood.id }}" class="btn btn-danger m-2">Delete</a>
+                    <a href="/update_blood/{{blood.id }}" class="btn btn-success">Update</a>
+                </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+       -->
+</div>
+<!-- {% endblock %} -->

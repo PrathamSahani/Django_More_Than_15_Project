@@ -1,0 +1,34 @@
+<!-- {% extends "base.html" %}
+{% block start %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+  .text{
+    color: green;
+    font-weight: bold;
+  }
+</style>
+<div class="container mt-5">
+  <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- <h2 class="text  text-center"> GeeksforGeeks </h2> -->  
+    <h3>Update Blood</h3>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Blood name</label>
+      <input name="blood_name" value="{{blood.blood_name}}" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Blood description</label>
+      <textarea name="blood_description" value="{{blood.blood_description}}" class="form-control"
+        required>{{blood.blood_description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Blood Image</label>
+      <input name="blood_image" type="file" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Update Blood</button>
+  </form>
+</div>
+
+<!-- {% endblock %} -->

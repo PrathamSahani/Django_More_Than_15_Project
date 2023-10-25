@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+<section>
+  
+        <div class="row">
+            <div class="col-12">
+                <form action="{% url 'submitform' %}" method="post">
+                    {% csrf_token %}
+                    {{form}}
+                    <!-- <div>
+                        <label for="">Value1</label>
+                        <input type="text" name="num1" value="{{n1}}">
+                    </div>
+                    <div>
+                        <label for="">Value2</label>
+                        <input type="text" name="num2" value="{{n2}}">
+                    </div> -->
+                    <div>
+                     <button type="submit">Save</button>
+                    </div>
+                    output:
+                    <input type="text" value="{{output}}">
+                </form>
+            </div>
+        </div>
+    
+</section>
+
+
+
+{% endblock %}

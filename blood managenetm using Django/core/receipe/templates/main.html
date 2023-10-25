@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .cont{
+    background-color: white;
+    box-shadow: 0px 5px 5px black;
+    width: 100px;
+    margin-top: 15%;
+    margin-left: 600px;
+    padding: 70px;
+    border-radius: 5px;
+   }
+   .user{
+     text-decoration: none;
+     font-size: 20px;
+     color: white;
+     margin-left: 10px;
+
+   }
+   .btn{
+    background-color: rgb(241, 100, 81);
+    padding:5px;
+    width: 100px;
+    display: block;
+    font-weight: bold;
+    border-radius: 6px;
+   }
+   .btn1{
+    background-color: rgb(20, 242, 20);
+    padding: 5px;
+    font-weight: bold;
+    display: block;
+    width: 100px;
+    border-radius: 6px;
+   }
+   .title{
+    margin-left: 610px;
+    margin-bottom: -10%;
+   font-family: 'Times New Roman', Times, serif;
+   }
+   
+
+</style>
+<body>
+      
+    <br>
+<h1 class="title"> Who are you? 🤔</h1>
+    <div class="cont">
+   <button class="btn"> <a class="user" href="{% url 'home' %}">🙋‍♂️ User</a></button>
+    <br>
+    <br>
+    <button class="btn1">  <a class="user" href="{% url 'admin_home' %}">🧑‍✈️ admin</a></button>
+</div>
+</body>
+</html>

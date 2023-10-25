@@ -1,0 +1,263 @@
+/* Common CSS for both header and footer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Unique styles for the header */
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.header h1 {
+    margin: 0;
+}
+
+/* Unique styles for the footer */
+.footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer p {
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header .active a{
+    background-color: blue;
+}
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.header h1 {
+    margin: 0;
+}
+.header ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center items horizontally */
+}
+.header li {
+    margin: 0 15px; /* Add spacing between list items */
+}
+a {
+    color: white;
+    text-decoration: none;
+}   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer p {
+    margin: 0;
+}
+    /* Common CSS for the entire page */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Header styles */
+    .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* Services section styles */
+    .services {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .service {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #f9f9f9;
+    }
+    
+    .service h2 {
+        margin-top: 0;
+    }
+    
+    /* Footer styles */
+    .footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Header styles */
+    .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* Contact section styles */
+    .contact {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .contact h1 {
+        margin-top: 0;
+    }
+    
+    .contact-form {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    
+    .contact-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .contact-form button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    /* Footer styles */
+    .footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .footer p {
+        margin: 0;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    .header h1 {
+        margin: 0;
+    }
+    .header ul {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Display items in a row */
+        justify-content: center; /* Center items horizontally */
+    }
+    .header li {
+        margin: 0 15px; /* Add spacing between list items */
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    header .active a{
+        background-color: blue;
+    }
+    /* Style for the whole form section */
+section {
+    padding: 20px;
+  }
+  
+  /* Style for form container */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for form labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for form input fields */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style for form submit button */
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    form {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Card 📝</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        
+        .login-card {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .teacher-login {
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.3s;
+        
+        }
+        
+        .teacher-login:hover {
+            background-color: #2980b9;
+        }
+        
+        .student-login {
+            background-color: #27ae60;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .TL{
+            text-decoration: none;
+            color: white;
+        }
+        
+        .student-login:hover {
+            background-color: #219a53;
+        }
+        body {
+            background-image: linear-gradient(rgba(4, 9, 30, 0),rgba(108, 208, 61, 0.4)),url(https://i.ibb.co/SNqkBQH/gfglogo-300x300.png);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+    </style>
+</head>
+<body>
+ 
+    <div class="login-card" style="background-color: rgba(248, 241, 241, 0.8);">
+        <h2>Login 🔐</h2>
+        <button class="teacher-login" > <a  class="TL"   href="{% url 'logins' %}">Teacher Login 👨‍🏫</a> </button>
+        <button class="student-login"><a class="TL" href="{% url 'login' %}">Student Login 👩‍🎓</a></button>
+    </div>
+</body>
+</html>

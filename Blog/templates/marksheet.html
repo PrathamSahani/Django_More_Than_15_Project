@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block  content %}
+
+
+<section>
+    <div class="row">
+        <div class="col-12">
+            <form action="" method="post">
+                {% if error %}
+                 <div class="alter">
+                    Please Enter The Value
+                 </div>
+                 {% endif %}
+                {% csrf_token %}
+
+                <label for="" >Subject 1</label>
+                <input type="text" name="n1" class="form-control">
+                <label for="" >Subject 1</label>
+                <input type="text" name="n2" class="form-control">
+        
+                <label for="" >Subject 1</label>
+                <input type="text" name="n3" class="form-control">
+                <label for="" >Subject 1</label>
+                <input type="text" name="n4" class="form-control">
+                <button type="submit">Marcksheet</button>
+
+                <label for="" > Total</label>
+                <input type="text" value="{{total}}" class="form-control">
+        
+                <label for="" >Percentage </label>
+                <input type="text" value="{{per}}" class="form-control">
+        
+                <label for="" >Division</label>
+                <input type="text" value="{{div}}" class="form-control">
+        
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock  %}

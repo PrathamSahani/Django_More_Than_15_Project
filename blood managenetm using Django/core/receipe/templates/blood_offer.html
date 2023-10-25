@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block start %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+  h3{
+    margin-left: 450px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+</style>
+<body>
+  <h3> " Welcome to Blood  Management System 🩸"</h3>
+    <div class="class mt-5">
+        <form action="">
+          <div class="max-auto col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Search Request 🔍</label>
+              <input name="search" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary "> Search 🔎</button>
+          </form>
+        </div>
+      </div>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Person Name</th>
+            <th scope="col">Reason 📋</th>
+            <th scope="col"> Group 🅾️</th>
+            <th scope="col"> Quantity (ml) 💉</th>
+            <th scope="col">Contact No. ☎️</th>
+            <th scope="col">Status 🟢🔴</th>
+            <th scope="col">Action 🚀</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for blood in bloods %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{blood.blood_name}}</td>
+            <td>{{blood.blood_description}}</td>
+            <td>{{blood.blood_date}}</td>
+            <td>{{blood.blood_age}}</td>
+            <td>{{blood.blood_fill}}</td>
+            <td>{{blood.blood_status}}</td>
+                <td>
+                    <a href="/delete_blood/{{blood.id }}" class="btn btn-danger m-2">Delete ❌</a>
+                    <a href="/update_blood/{{blood.id }}" class="btn btn-success">Update ✏️</a>
+                </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>
+
+{% endblock %}

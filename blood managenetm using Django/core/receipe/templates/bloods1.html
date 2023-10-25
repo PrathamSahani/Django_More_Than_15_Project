@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block start %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .text {
+    color: green;
+    font-weight: bold;
+  }
+  .wel {
+    margin-left: 450px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+</style>
+<h3 class="wel"> " Welcome to Blood Management System 🩸"</h3>
+<div class="container mt-5">
+  <form class="col-4 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+    <h3 style="font-weight: bold;">Donate Blood 💉</h3>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Person name 👤</label>
+      <input name="blood1_name" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> Any Diseases 🤒</label>
+      <textarea name="blood1_description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Blood Group 🅾️</label>
+      <input name="blood1_reason" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for= "exampleInputPassword1">Blood Quantity (ml) 💉</label>
+      <input name="blood1_age" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contact No. ☎️</label>
+      <input name="blood1_fill" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-danger">Add ➕</button>
+  </form>
+  <hr>
+</div>
+{% endblock %}

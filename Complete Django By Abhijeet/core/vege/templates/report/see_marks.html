@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block start %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+
+    <h4>Rank : {{current_rank}} </h4>
+    <h4>Total : {{total_marks.total_marks}} </h4>
+    <table class="table">
+     
+        <tbody>
+            {% for marks in queryset %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td> <strong> {{marks.subject.subject_name}}</strong> </td>
+                <td>{{marks.marks}}</td>
+                  </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+  </div>
+
+{% endblock %}

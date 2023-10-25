@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!-- Include the Vue.js library -->
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <!-- Include Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<div id="app">
+    [[pincode]]
+  <div class="container mt-4">
+    <div class="row mt-5 pt-5">
+      <div class="col-md-4">
+        <label for="">Enter pincode</label>
+        <input type="text" v-model="pincode" class="form-control" placeholder="Enter pincode">
+      </div>
+
+      <div class="col-md-4">
+        <label for="">Select Km</label>
+        <select class="form-control" v-model="km">
+        <option selected>Choose</option>
+          <option value="1">1KM</option>
+          <option value="2">2KM</option>
+        </select>
+      </div>
+      <div class="col-md-4" >
+        <button class="btn btn-success mt-4" v-on:click="getRest()">Submit</button>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-5">
+      <div class="col-md-4" v-for ="restro in restros">
+        <div class="card shadow-lg" style="width: 18rem;">
+          <img class="card-img-top" :src="restro.image" style="height: 200px;" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">[[restro.name]]</h5>
+            <p class="card-text">[[restro.description]]</p>
+            <a href="#" class="btn btn-primary">[[restro.distance]]KM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/vue@3.0.0-rc.5/dist/vue.global.prod.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    delimiters: ['[[', ']]'],
+    data() {
+      return {
+        pincode : '',
+        km : '',
+        tasks: [],
+        restros : []
+      }
+
+    },
+    created() {
+      this.tasks = ['do this 🐱‍🐉', 'and that 🤳'];
+    },
+    methods :{
+        getRest(){
+            if( this.km==''){
+                alert("Pincode Cannot be null")
+                return ;
+            }
+            fetch(`/api/get?pincode=${this.pincode}&km=${this.km}`)
+            .then(result => result.json())
+            .then(response => {
+                this.restros = response
+            });
+
+        }
+    }
+  });
+</script>
+{% endblock %}

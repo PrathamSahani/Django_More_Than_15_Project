@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-top: 20px;
+    background: rgb(246, 224, 224);
+    background-size: cover;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-position: center;
+    max-width: 450px;
+    height: 90vh;
+    margin: 25px auto;
+    position: relative;
+}
+
+#textBox {
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    padding: 20px;
+}
+
+#prevText {
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 2px 2px 20px solid;
+}
+
+.upload-icon {
+    position: absolute;
+    width: 50px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+}

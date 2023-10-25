@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block start %}
+    <h1>Hello World!</h1>
+    <!-- {{peoples}} -->
+    <a   href="/cotact/"> <!-- Corrected the URL -->
+        Contact
+    </a>
+    <a href="/about/"> <!-- Corrected the URL -->
+        About
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>can Vote</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for people in peoples %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ people.name }}</td>
+                <td>{{ people.age }}</td>
+                <td {% if people.age != 21 %} style="background: red;" {% endif %}> 
+                    {% if people.age != 21 %}
+                        👍
+                    {% else %}
+                        👎
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Your Django view code goes here -->
+    <!-- <p>{{text}}</p> -->
+    <p>
+        {% if 'cucumber' in vegitable %}
+            Yes, Available
+        {% elif 'tomato' in vegitable %}
+            Yes
+        {% else %}
+            Not Available
+        {% endif %}
+    </p>
+{% endblock %}

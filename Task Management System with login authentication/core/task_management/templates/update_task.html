@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block start %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container mt-5">
+  <form class="col-6 mx-auto custom-margin" method="post" enctype="multipart/form-data">
+    <div class="custom-card">
+    <div class="custom-form">
+       
+  
+    {% csrf_token %}
+    <h2 class="text-center" id="gfg">GeeksforGeeks</h2>
+    <h3   class="custom-title">📝 Update Task </h3>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1"> 📋 Task name</label>
+      <input name="task_name" value="{{task.task_name}}" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> 📝 Task description</label>
+      <textarea name="task_description" class="form-control" required>{{task.task_description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> 📷 Task Image</label>
+      <input name="task_image" type="file" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success text-center"> Update Task</button>
+  </form>
+</div>
+</div>
+<style>
+  #gfg{
+    color: green;
+    font-weight: bold;
+  }
+  .custom-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .custom-title {
+    color: #171819;
+    text-align: center;
+  }
+  .custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+
+</style>
+
+{% endblock %}

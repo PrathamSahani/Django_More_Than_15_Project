@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.5/htmx.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        /* Style the background color and text color of the body */
+        body {
+            background-color: #1e1e1e; /* Dark background */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the header/navbar */
+        .navbar {
+            background-color: #30b65d; /* Green background for the navbar */
+        }
+
+        .navbar-brand {
+            color: #fff !important; /* White text for the navbar brand */
+        }
+
+        /* Style the container */
+        .container {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        /* Style the title */
+        .title {
+            font-size: 36px;
+            color: #30b65d; /* Green title color */
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1 class="title">GEEKSFORGEEKS</h1>
+        <h2 class="text-center text-white">GET CURRENCY REAL TIME</h2>
+        <div id="currency" hx-get="/get_currency/" hx-trigger="every 2s" hx-swap="innerhtml">
+            {% include 'partial/show.html' %}
+        </div>
+    </div>
+</body>
+</html>

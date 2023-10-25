@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet"  href="{% static 'index.css' %}">
+
+ 
+    <img src="{% static 'path' %}" alt="">
+    <!-- <div class="main"> {{bdata}} {{clist}}</div> -->
+    <!-- =================FOR LOOP ALL PROCESSS============== -->
+    {% for n in clist %}
+    <div>{{forloop.last}} {{n}}</div>
+    {% endfor %}
+    <br>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+
+        {% for d in student_details %}
+        <tr>
+            <td> {{d.name}} </td>
+            <td> {{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <!-- {% for n in clist %}
+    <div>{{forloop.first}} {{n}}</div>
+    {% endfor %} -->
+
+    <!-- {% for n in clist %}
+    <div>{{forloop.last}} {{n}}</div>
+    {% endfor %} -->
+
+    <!-- {% for n in clist %}
+    <div>{{forloop.counter0}} {{n}}</div>
+    {% endfor %} -->
+
+    <!-- {% for n in clist %}
+    <div>{{forloop.revcounter}} {{n}}</div>
+    {% endfor %} -->
+
+    <!-- {% for n in clist %}
+    <div>{{n}}</div>
+    {% endfor %} -->
+
+
+    <!-- ==============IF AND ELSE CONDITION================= -->
+
+    <!-- {% for n in number %}
+    {% if n > 20 %}
+    <div>{{n}}</div>
+    {% endif %}
+    {% endfor %} -->
+
+    {% if number|length > 0 %}
+    {% for n in number %}
+    {% if n > 20 %}
+    <div>{{n}}</div>
+    {% endif %}
+    {% endfor %}
+    {% else%}
+    No Data Found
+    {% endif %}
+
+  
+    {% endblock %}
+<!-- </body>
+
+</html> -->

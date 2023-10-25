@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Add CSS for the card */
+        .card {
+            
+            width: 300px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <div class="card">
+        <h1 class="card-title">GeeksforGeeks</h1>
+        <p>GFG Custom  {{title}}</p>
+
+        {% if website.debug %}
+        <div style="padding: 20px; background: yellow; color: black;">
+            You are in debug. The address is: {{website.url}} <br>
+            The response time was: {{website.response_time}} seconds<br>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

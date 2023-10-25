@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="menu">
+                <div class="title">
+                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="" method="post">
+                        {% if error %}
+                        <div class="alert" role="alert">
+                            Please Enter The Value
+                        </div>
+                        {% endif %}
+                        {% csrf_token %}
+                        <label for="">Value 1</label>
+                        <input type="text" name="num1" class="form-control"/>
+                        <button type="submit"> Even | Odd</button> <br>
+                        <input type="text" value="{{c}}" class="form-control">
+                  </form>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

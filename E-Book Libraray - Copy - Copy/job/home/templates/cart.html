@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block start %}
+
+<div class="container card shadow-lg mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th  scope="col">S.No.</th>
+
+                <th  scope="col">Action</th>
+                
+                <th  scope="col">Book</th>
+                <th scope="col" >Name</th>
+                <th scope="col">Price</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for cartItems in carts.cart_items.all %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td><a href="{% url 'remove_cart' cartItems.uid %}" class="btn btn-danger"><i class="fas fa-paper-plane"></i> Submit</a>
+                </td>
+                <td><img src="https://i.ibb.co/zhyRW8r/sc.png"  style="height: 100px; width:100px;"></td>
+                <td><h5>{{cartItems.book.book_name}}</h5></td>
+                <td><a href="https://www.geeksforgeeks.org/" class="btn btn-success"><i class="fas fa-pencil-alt"></i> Start Reading</a>
+         
+           
+            </tr>
+            {% endfor %}
+            <tr>
+
+                <th scope="col"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+{% endblock %}

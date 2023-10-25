@@ -1,0 +1,53 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .text {
+    color: green;
+    font-weight: bold;
+  }
+
+  body {
+    background-image: linear-gradient(rgba(4, 9, 30, 0), rgba(108, 208, 61, 0.4)), url(https://i.ibb.co/SNqkBQH/gfglogo-300x300.png);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
+
+<div class="container mt-5">
+
+  <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data"
+    style="background-color: rgba(248, 241, 241, 0.8);">
+    {% csrf_token %}
+    <h2 class="text  text-center">  🤓</h2>
+
+    <h3>Update Schedule 📅</h3>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Subject name 📚</label>
+      <input name="subject_name" value="{{subject.subject_name}}" type="text" class="form-control" required
+        style="background-color: rgba(248, 241, 241, 0.8);">
+    </div>
+    <div class "form-group">
+      <label for="exampleInputPassword1">Subject description ✍️</label>
+      <textarea name="subject_description" value="" class="form-control" required
+        style="background-color: rgba(248, 241, 241, 0.8);">{{subject.subject_description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Class Link 🔗</label>
+      <input name="class_link" type="text" value="{{subject.class_link}}" class="form-control"
+        style="background-color: rgba(248, 241, 241, 0.8);">
+    </div>
+
+    <button type="submit" class="btn btn-success">Update Recipe 🍽️</button>
+  </form>
+
+
+</div>

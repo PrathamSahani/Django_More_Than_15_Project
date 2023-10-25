@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome to GFG Classroom 🏫</title>
+  <style>
+    body {
+      background-image: linear-gradient(rgba(4, 9, 30, 0), rgba(108, 208, 61, 0.4)), url(https://i.ibb.co/SNqkBQH/gfglogo-300x300.png);
+
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #567392;
+    }
+
+    .emoji {
+      font-size: 36px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to GFG Classroom 🏫</h1>
+  </header>
+  <p>Your path to knowledge and growth starts here. 🚀</p>
+  <a href="{% url 'create_class' %}" class="button">Schedule Class 🗓️</a>
+  <div class="emoji">📚👩‍🏫</div>
+</body>
+
+</html>
